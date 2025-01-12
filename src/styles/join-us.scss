@@ -1,0 +1,176 @@
+@use "./vars.scss" as *;
+
+.join-us {
+    background-color: $dark;
+
+    .join-us-video-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 150px 30px;
+        background: url("./images/join-us-bg.jpg") center/cover no-repeat $dark;
+
+        .join-us-video {
+            width: 100%;
+            max-width: 960px;
+            height: auto;
+        }
+
+        .join-us-video-play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            width: 200px;
+            aspect-ratio: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: $border;
+            border-radius: 50%;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $white;
+            column-gap: 4px;
+
+            &::after {
+                content: "";
+                width: 26px;
+                height: 26px;
+                background: url("./images/arrow-top-right.svg") center/contain no-repeat;
+            }
+
+            &:hover {
+                color: $black;
+                background-color: $light-grey;
+
+                &::after {
+                    filter: invert(1);
+                }
+            }
+        }
+    }
+
+    .join-us-body {
+        padding-bottom: 150px;
+
+        .join-us-title {
+            position: relative;
+            margin-top: -0.5em;
+            font-size: clamp(64px, 9.37vw, 180px);
+            line-height: 1;
+            text-align: center;
+            color: $white;
+
+            &::after {
+                content: "";
+                display: inline-flex;
+                height: 0.7em;
+                width: 0.7em;
+                margin-left: 0.14em;
+                background: url("./images/bold-arrow-down-right.svg")  center/contain no-repeat;
+                scale: 1 -1;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 130px;
+            }
+        }
+
+        .join-us-form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            column-gap: 20px;
+
+            .join-us-form-header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 7px;
+
+                .join-us-form-title {
+                    font-size: 60px;
+                }
+
+                .join-us-form-subtitle {
+
+                }
+
+
+                &:not(:last-child) {
+                    margin-bottom: 52px;
+                }
+            }
+
+            .join-us-form-body {
+                display: flex;
+                justify-content: center;
+                column-gap: 20px;
+
+                .join-us-form-input {
+                    max-width: 400px;
+                }
+            }
+
+            .join-us-form-button {
+                color: $white;
+            }
+        } 
+    }
+}
+
+@media (max-width: 1024px) {
+    .join-us {
+        .join-us-body {
+            padding-bottom: 80px;
+
+            .join-us-title:not(:last-child) {
+                padding-bottom: 80px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .join-us {
+        .join-us-video-wrapper {
+            .join-us-video-play-button {
+                width: 140px;
+            }
+        }
+
+        .join-us-body {
+            .join-us-title:not(:last-child) {
+                padding-bottom: 40px;
+            }
+
+            .join-us-form {
+                flex-direction: column;
+
+                .join-us-form-header {
+                    .join-us-form-subtitle {
+                        font-size: 16px;
+                    }
+                }
+
+                .join-us-form-body {
+                    flex-direction: column;
+                    align-items: center;
+                    row-gap: 20px;
+                }
+
+                .join-us-form-button {
+                    align-self: center;
+                    width: 400px;
+                }
+
+                &:not(:first-child) {
+                    row-gap: 20px;
+                }
+            }
+        }
+    }
+}

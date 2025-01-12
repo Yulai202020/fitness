@@ -1,0 +1,51 @@
+@use "./vars.scss" as *;
+
+.training-types {
+    position: relative;
+    max-width: 1920px;
+    margin-inline: auto;
+    padding-top: 70px;
+    padding-bottom: 120px;
+    background-color: $black;
+
+    .training-types-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 60px;
+
+        .training-types-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 32px;
+            padding-top: 80px;
+            background: url("./images/transparent-arrow-bottom-left.svg") 100% 0/80px no-repeat;
+
+            .training-types-image {
+
+            }
+
+            .training-types-item-title {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1250px) {
+    .training-types {
+        .training-types-list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .training-types {
+        .training-types-list {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 15px;
+        }
+    }
+}

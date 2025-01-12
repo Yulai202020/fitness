@@ -1,0 +1,72 @@
+@use "./vars.scss" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 100%;
+}
+
+body {
+    font-family: $base-font;
+    color: $light-grey;
+    font-size: 16px;
+    background-color: $black;
+    min-width: 100%;
+}
+
+svg {
+    *[fill] {
+        fill: currentColor;
+    }
+
+    *[stroke] {
+        stroke: currentColor;
+    }
+
+    * {
+        transition-property: fill, stroke;
+    }
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+    transition-duration: $animation-duration;
+}
+
+a {
+    color: $white;
+
+    &:hover {
+        color: $light-grey;
+    }
+}
+
+p {
+    margin-block: 0;
+}
+
+p:not([class]):not(:last-child) {
+    margin-bottom: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+}
+
+li {
+    list-style-type: none;
+}

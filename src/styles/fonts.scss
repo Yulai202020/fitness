@@ -1,0 +1,17 @@
+@use "./vars.scss" as *;
+
+@font-face {
+    font-family: "Heebo";
+    src: url("font/Heebo-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Heebo";
+    src: url("font/Heebo-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

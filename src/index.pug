@@ -1,0 +1,262 @@
+doctype html
+html(lang='en')
+    head
+        title Hello, World!
+        link(rel="stylesheet" href="style.scss")
+        script(type="module" src="index.ts")
+    body
+        header.header
+            a.header-logo(href="/")
+                img.header-logo-image(src="./images/logo.png" alt="Kropp Logo" width="135" height="25" loading="lazy")
+            nav.header-menu
+                ul.header-menu-list
+                    li.header-menu-item
+                        a.header-menu-link.is-current(href="/") Home
+                    li.header-menu-item
+                        a.header-menu-link(href="/") Pages
+                    li.header-menu-item
+                        a.header-menu-link(href="/") Profolio
+                    li.header-menu-item
+                        a.header-menu-link(href="/") Blog
+                    li.header-menu-item
+                        a.header-menu-link(href="/") Shop
+            div.header-actions
+                button.button Book Now
+                button.header-burger-button.button
+                    span.header-burger-button-line
+                    span.header-burger-button-line
+                    span.header-burger-button-line
+        main.content
+            h1.visually-hidden Kropp Fitness Club
+            section.banner
+                h2.visually-hidden Upcoming events
+                div.banner-body
+                    div.banner-info
+                        | New
+                        br
+                        | coming up / 
+                        time(datetime="06-07") june 7
+                        |&nbsp;-&nbsp;
+                        time(datetime="06-13") 13
+                    h3.banner-title Crossfit
+                div.banner-pagination
+                    ul.banner-pagination-list
+                        li.banner-pagination-item
+                            button.banner-pagination-button(type="button")
+                        li.banner-pagination-item
+                            button.banner-pagination-button(type="button")
+                        li.banner-pagination-item
+                            button.banner-pagination-button.is-current(type="button")
+            section.motivation
+                h2.visually-hidden Motivation
+                ul.motivation-list
+                    li.motivation-item
+                        div.motivation-card.container
+                            div.motivation-card-body
+                                h3.motivation-card-title.backdrop-title.title-meduim(data-title="Strong")
+                                    | Be you just stronger
+                                    br
+                                    | Power is in you
+                                div.motivation-card-description
+                                    p Unum solum justo ex ius. Pro cu probo laboramus eius insolens euripidis te eos, ut agam tota.
+                                a.motivation-card-button.button.transparent(href="/") View more 
+                            img.motivation-card-image(src="./images/motivation/1.jpg", alt="Man")
+                    li.motivation-item
+                        div.motivation-card.container
+                            div.motivation-card-body
+                                h3.motivation-card-title.backdrop-title.title-meduim(data-title="Start")
+                                    | Today the best
+                                    br
+                                    | day to start!
+                                div.motivation-card-description
+                                    p Sed abhorreant constituam consectetuer eu. At mei clita deserunt, his movet molestie nemore.
+                                a.motivation-card-button.button.transparent(href="/") View more 
+                            img.motivation-card-image(src="./images/motivation/2.jpg", alt="Man")
+            section.training-types
+                h2.visually-hidden Types of training 
+                ul.training-types-list
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/1.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title Maxpump
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/2.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title aron gym
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/3.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title fit & tone
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/4.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title forza
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/5.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title balance fitness
+                    li.training-types-item
+                        img.training-types-image(src="./images/training-types/6.svg" alt="" width="150" height="140")
+                        h3.training-types-item-title body sculpt        
+            section.join-us
+                div.join-us-video-wrapper
+                    video.join-us-video(src="./a.webm" width="960" height="600" poster="./images/video-placeholder.jpg")
+                    button.join-us-video-play-button(type="button") Play
+                div.join-us-body.container
+                    h2.join-us-title Join us
+                    form.join-us-form
+                        header.join-us-form-header
+                            h3.join-us-form-title.backdrop-title.centered(data-title="Go!") Start here
+                            div.section-description fill the form below to start your journey
+                        div.join-us-form-body
+                            label.visually-hidden(for="username") Name
+                            input.join-us-form-input.input(placeholder="name" id="username")
+
+                            label.visually-hidden(for="email") Email
+                            input.join-us-form-input.input(placeholder="email" type="email" id="email")
+
+                            button.join-us-form-button.button.transparent(type="submit") Subscribe
+            section.location.container-wide
+                img.location-map-image(src="./images/map.jpg")
+                div.location-body
+                    h2.location-title.title-medium.backdrop-title.centered(data-title="Look") Find us near you
+                    div.location-description
+                        p Nec suas signiferumque id. An eum labore commodo principes. Usu diam noluisse cu, nam adipisci
+                    a.location-button.button.transparent(href="/") View more 
+            div.family
+                header.family-header.container
+                    h2.family-title.title-big.backdrop-title.centered(data-title="Part") be a part of our fit family
+                    div.section-description
+                        p Training helps you think and feel better. join us!
+                div.family-body.container-wide
+                    img.family-image(src="./images/family/1.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/2.jpg", alt="Training people", width="744", height="479")
+                    img.family-image(src="./images/family/3.jpg", alt="Training people", width="396", height="479")
+                    img.family-image(src="./images/family/4.jpg", alt="Training people", width="396", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+                    img.family-image(src="./images/family/5.jpg", alt="Training people", width="414", height="479")
+            section.calculate
+                div.calculate-inner.container
+                    div.calculate-body
+                        h2.calculate-title.title-medium.backdrop-title(data-title="BMI") Input your BMI
+                        div.calculate-description
+                            p Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicurei
+                        form.calculate-form
+                            div.calculate-form-body
+                                label.visually-hidden(for="height") Height
+                                input.calculate-input.input(placeholder="Height / cm" id="height" type="number")
+
+                                label.visually-hidden(for="weight") Weight
+                                input.calculate-input.input(placeholder="Weight / kg" id="weight" type="number")
+
+                                label.visually-hidden(for="age") Age
+                                input.calculate-input.input(placeholder="Age" id="age" type="number")
+
+                                label.visually-hidden(for="gender") Gender
+                                select.calculate-input.input(id="gender")
+                                    option(value="" disabled selected) Gender
+                                    option(value="male") Male
+                                    option(value="female") Female
+
+                                label.visually-hidden(for="activity-factor") Select an activity factor
+                                select.calculate-input.input.wide(id="activity-factor")
+                                    option(value="" disabled selected) Select an activity factor
+                                    option(value="1") 1
+                                    option(value="2") 2
+
+                            button.calculate-button.button.transparent(type="submit") Calculate
+                    div.calculate-table-wrapper
+                        table.calculate-table
+                            thead
+                                tr
+                                    th BMI
+                                    th Weight statuss
+
+                            tbody
+                                tr
+                                    td Below 18.5
+                                    td Underweight
+                                tr
+                                    td 18.5 - 24.9
+                                    td Healthy
+                                tr
+                                    td 25.0 - 29.9
+                                    td Overweight
+                                tr
+                                    td 30.0 - over Above
+                                    td Obese
+
+                            tfoot
+                                tr
+                                    td(colspan="2")
+                                        b BMR 
+                                        | Metabolic Rate /
+                                        b BMI 
+                                        | Body Mass Index
+        footer.footer
+            div.footer-main
+                div.footer-main-inner.container
+                    header.footer-header
+                        a.footer-logo(href="/")
+                            img.footer-logo-image(src="./images/logo.png" alt="Kropp Logo" width="270" height="50" loading="lazy")
+                        p.footer-description
+                            | please feel free to send us an e-mail at 
+                            a(href="mailto:kropp@qodeinteractive.com") kropp@qodeinteractive.com
+                            |  for any additional inquiries
+                    div.footer-body
+                        div.footer-column
+                            h2.footer-column-title about
+                            p.footer-column-about Shape up your site with Kropp, a theme especially made for fitness & gym website
+                        div.footer-column
+                            h2.footer-column-title working hours
+                            div.footer-schedule
+                                | Monday - Friday
+                                br
+                                time(datetime="05:30/24:00") 05:30 - 24:00
+                            div.footer-schedule
+                                | Weekdays
+                                br
+                                time(datetime="0:00/24:00") 0:00 - 24:00
+                        div.footer-column
+                            h2.footer-column-title location
+                            address.footer-address
+                                | 68 Jay Street, Brookyn,
+                                br
+                                | NY 11201, United States
+                            div.footer-contacts
+                                ul.footer-contacts-list
+                                    li.footer-contacts-item
+                                        a.footer-contacts-link(href="mailto:kropp@qodeinteractive.com") kropp@qodeinteractive.com
+                                    li.footer-contacts-item
+                                        a.footer-contacts-link(href="tel:+17184076400") + (1) 718 - 407 - 6400
+                        div.footer-column
+                            h2.footer-column-title.has-arrow start now
+                            p.footer-column-about
+                            form.footer-subscribe
+                                input.footer-subscribe-input.input(type="email", placeholder="Email")
+                                button.footer-subscribe-button(type="submit", title="Subscribe")
+                                    snap.visually-hidden Subscribe
+                            div.footer-soc1als
+                                ul.footer-soc1als-list
+                                    li.footer-soc1als-item
+                                        a.footer-soc1als-link(href="/", target="_blank")
+                                            include images/icons/tiktok.svg
+                                    li.footer-soc1als-item
+                                        a.footer-soc1als-link(href="/", target="_blank")
+                                            include images/icons/youtube.svg
+                                    li.footer-soc1als-item
+                                        a.footer-soc1als-link(href="/", target="_blank")
+                                            include images/icons/instagram.svg
+                                    li.footer-soc1als-item
+                                        a.footer-soc1als-link(href="/", target="_blank")
+                                            include images/icons/facebook.svg
+                                    li.footer-soc1als-item
+                                        a.footer-soc1als-link(href="/", target="_blank")
+                                            include images/icons/twitter.svg
+            div.footer-extra
+                div.footer-extra-inner.container
+                    div.footer-copyright
+                        | © 
+                        time(date-time="2022") 2022 
+                        | Qode Interactive, All Rights Reserved | 
+                        a(href="/") Privacy Policy |
+                        a(href="/") Contact Us
